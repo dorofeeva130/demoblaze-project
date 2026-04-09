@@ -17,3 +17,10 @@
 
 Дорофеева Ульяна Александровна — группа 430 — GitHub: dorofeeva130  
 Смелова Анна Сергеевна — группа 430 — GitHub: Ann7750
+
+## Чек-листы тестирования
+
+- [Главная страница](checklists/main_page.md)
+- [Категории товаров](checklists/categories.md)
+- [Карточка товара](checklists/product_page.md)
+- [Корзина](checklists/cart.md)
