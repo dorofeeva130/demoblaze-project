@@ -21,3 +21,6 @@
 ## Чек-листы тестирования
 
 - [Карточка товара](checklists/product_page.md)
+- [Главная страница](checklists/main_page.md)
+- [Категории товаров](checklists/categories.md)
+- [Корзина](checklists/cart.md)
