@@ -20,4 +20,4 @@
 
 ##Чек-листы тестирования
 
--[Категории товаров](checklists/categories.md)
+- [Категории товаров](checklists/categories.md)
