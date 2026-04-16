@@ -27,4 +27,5 @@
 
 ## Ручное тестирование
 
+- [Авторизация пользователя](docs/manual_test_login.docx)
 - [Регистрация пользователя](docs/manual_test_registration.docx)
