@@ -28,3 +28,6 @@
 ## Ручное тестирование
 
 - [Place Order](docs/manual_test_place_order.docx.docx)
+- [Корзина](docs/manual_test_cart.docx.docx)
+- [Авторизация пользователя](docs/manual_test_login.docx)
+- [Регистрация пользователя](docs/manual_test_registration.docx)
