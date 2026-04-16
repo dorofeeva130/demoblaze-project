@@ -24,3 +24,7 @@
 - [Главная страница](checklists/main_page.md)
 - [Категории товаров](checklists/categories.md)
 - [Корзина](checklists/cart.md)
+
+## Ручное тестирование
+
+- [Корзина](docs/manual_test_cart.docx)
