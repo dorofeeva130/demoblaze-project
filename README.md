@@ -27,4 +27,4 @@
 
 ## Ручное тестирование
 
-- [Place Order](docs/manual_test_place_order.docx)
+- [Place Order](docs/manual_test_place_order.docx.docx)
