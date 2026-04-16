@@ -27,4 +27,4 @@
 
 ## Ручное тестирование
 
-- [Корзина](docs/manual_test_cart.docx)
+- [Корзина](docs/manual_test_cart.docx.docx)
