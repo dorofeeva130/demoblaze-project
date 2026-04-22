@@ -1,29 +1,30 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
-import time
 
 
 def test_categories_switch():
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-    driver.get("https://www.demoblaze.com")
-    driver.maximize_window()
-    time.sleep(2)
+    wait = WebDriverWait(driver, 10)
 
-    phones = driver.find_element(By.LINK_TEXT, "Phones")
-    phones.click()
-    time.sleep(2)
-    assert "Samsung galaxy s6" in driver.page_source or "Nokia lumia 1520" in driver.page_source
+    try:
+        driver.get("https://www.demoblaze.com")
+        driver.maximize_window()
 
-    laptops = driver.find_element(By.LINK_TEXT, "Laptops")
-    laptops.click()
-    time.sleep(2)
-    assert "Sony vaio i5" in driver.page_source or "MacBook air" in driver.page_source
+        phones = wait.until(EC.element_to_be_clickable((By.LINK_TEXT, "Phones")))
+        phones.click()
+        wait.until(EC.presence_of_element_located((By.LINK_TEXT, "Samsung galaxy s6")))
 
-    monitors = driver.find_element(By.LINK_TEXT, "Monitors")
-    monitors.click()
-    time.sleep(2)
-    assert "Apple monitor 24" in driver.page_source or "ASUS Full HD" in driver.page_source
+        laptops = wait.until(EC.element_to_be_clickable((By.LINK_TEXT, "Laptops")))
+        laptops.click()
+        wait.until(EC.presence_of_element_located((By.LINK_TEXT, "Sony vaio i5")))
 
-    driver.quit()
+        monitors = wait.until(EC.element_to_be_clickable((By.LINK_TEXT, "Monitors")))
+        monitors.click()
+        wait.until(EC.presence_of_element_located((By.LINK_TEXT, "Apple monitor 24")))
+
+    finally:
+        driver.quit()
