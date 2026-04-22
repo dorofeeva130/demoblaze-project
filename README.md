@@ -61,5 +61,5 @@ pytest
 ```
 7. Запустить отдельный тест:
 ```sh
-pytest tests/test_homepage.py
+pytest tests/test_categories.py
 ```
