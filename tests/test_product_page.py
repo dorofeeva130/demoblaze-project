@@ -1,22 +1,27 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
-import time
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 def test_open_product_page():
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-    driver.get("https://www.demoblaze.com")
-    driver.maximize_window()
-    time.sleep(2)
+    driver = webdriver.Chrome()
+    wait = WebDriverWait(driver, 10)
 
-    product = driver.find_element(By.LINK_TEXT, "Samsung galaxy s6")
-    product.click()
-    time.sleep(2)
+    try:
+        driver.get("https://www.demoblaze.com")
+        driver.maximize_window()
 
-    assert "Samsung galaxy s6" in driver.page_source
-    assert "$360" in driver.page_source or "360" in driver.page_source
-    assert "Product description" in driver.page_source
+        product = wait.until(EC.element_to_be_clickable((By.LINK_TEXT, "Samsung galaxy s6")))
+        product.click()
 
-    driver.quit()
+        wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, ".name")))
+        wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, ".price-container")))
+        wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "#more-information")))
+
+        assert "Samsung galaxy s6" in driver.page_source
+        assert "$360" in driver.page_source or "360" in driver.page_source
+        assert "Product description" in driver.page_source
+
+    finally:
+        driver.quit()
