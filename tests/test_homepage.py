@@ -1,6 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 import requests
 
 
@@ -10,9 +8,12 @@ def test_homepage_status_code():
 
 
 def test_homepage_loads():
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-    driver.get("https://www.demoblaze.com")
+    driver = webdriver.Chrome()
 
-    assert "STORE" in driver.page_source or "PRODUCT STORE" in driver.page_source
+    try:
+        driver.get("https://www.demoblaze.com")
 
-    driver.quit()
+        assert "STORE" in driver.page_source or "PRODUCT STORE" in driver.page_source
+
+    finally:
+        driver.quit()
