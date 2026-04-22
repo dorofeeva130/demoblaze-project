@@ -31,3 +31,35 @@
 - [Корзина](docs/manual_test_cart.docx.docx)
 - [Авторизация пользователя](docs/manual_test_login.docx)
 - [Регистрация пользователя](docs/manual_test_registration.docx)
+
+## Автоматизированное тестирование
+
+### Автотесты
+- [Тест перехода между категориями товаров](tests/test_categories.py)
+
+### Инструкция по запуску
+1. Установить Python.
+2. Открыть терминал в папке проекта.
+3. Создать виртуальное окружение:
+```sh
+python -m venv .venv
+```
+4. Активировать виртуальное окружение:
+```sh
+.venv\Scripts\activate.ps1
+```
+Разрешить выполнение скриптов:
+   `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+
+5. Установить зависимости:
+```sh
+pip install -r requirements.txt
+```
+6. Запустить все тесты:
+```sh
+pytest
+```
+7. Запустить отдельный тест:
+```sh
+pytest tests/test_homepage.py
+```
