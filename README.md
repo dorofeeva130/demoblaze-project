@@ -41,12 +41,25 @@
 1. Установить Python.
 2. Открыть терминал в папке проекта.
 3. Создать виртуальное окружение:
-   `python -m venv .venv`
+```sh
+python -m venv .venv
+```
 4. Активировать виртуальное окружение:
-   `.venv\Scripts\activate`
+```sh
+.venv\Scripts\activate.ps1
+```
+Разрешить выполнение скриптов:
+   `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+
 5. Установить зависимости:
-   `pip install -r requirements.txt`
+```sh
+pip install -r requirements.txt
+```
 6. Запустить все тесты:
-   `pytest`
+```sh
+pytest
+```
 7. Запустить отдельный тест:
-   `pytest tests/test_homepage.py`
+```sh
+pytest tests/test_homepage.py
+```
