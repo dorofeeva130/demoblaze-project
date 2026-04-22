@@ -31,3 +31,22 @@
 - [Корзина](docs/manual_test_cart.docx.docx)
 - [Авторизация пользователя](docs/manual_test_login.docx)
 - [Регистрация пользователя](docs/manual_test_registration.docx)
+
+## Автоматизированное тестирование
+
+### Автотесты
+- [Тест загрузки главной страницы](tests/test_homepage.py)
+
+### Инструкция по запуску
+1. Установить Python.
+2. Открыть терминал в папке проекта.
+3. Создать виртуальное окружение:
+   `python -m venv .venv`
+4. Активировать виртуальное окружение:
+   `.venv\Scripts\activate`
+5. Установить зависимости:
+   `pip install -r requirements.txt`
+6. Запустить все тесты:
+   `pytest`
+7. Запустить отдельный тест:
+   `pytest tests/test_homepage.py`
