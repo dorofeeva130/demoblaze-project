@@ -32,10 +32,8 @@
 - [Авторизация пользователя](docs/manual_test_login.docx)
 - [Регистрация пользователя](docs/manual_test_registration.docx)
 
-## Автоматизированное тестирование
-
 ### Автотесты
-
+- [Тест открытия карточки товара](tests/test_product_page.py)
 - [Тест добавления товара в корзину](tests/test_cart.py)
 - [Тест перехода между категориями товаров](tests/test_categories.py)
 - [Тест загрузки главной страницы](tests/test_homepage.py)
@@ -63,6 +61,9 @@ pip install -r requirements.txt
 pytest
 ```
 7. Запустить отдельный тест:
+```sh
+pytest tests/test_product_page.py
+```
 ```sh
 pytest tests/test_cart.py
 ```
