@@ -64,15 +64,11 @@ pytest
 ```
 7. Запустить отдельный тест:
 ```sh
-<<<<<<< HEAD
 pytest tests/test_cart.py
 ```
-=======
-<<<<<<< HEAD
+```sh
 pytest tests/test_categories.py
 ```
-=======
+```sh
 pytest tests/test_homepage.py
 ```
->>>>>>> main
->>>>>>> main
