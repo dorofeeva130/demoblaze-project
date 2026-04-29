@@ -34,6 +34,9 @@
 
 ### Автотесты
 - [Тест открытия карточки товара](tests/test_product_page.py)
+- [Тест добавления товара в корзину](tests/test_cart.py)
+- [Тест перехода между категориями товаров](tests/test_categories.py)
+- [Тест загрузки главной страницы](tests/test_homepage.py)
 
 ### Инструкция по запуску
 1. Установить Python.
@@ -60,4 +63,13 @@ pytest
 7. Запустить отдельный тест:
 ```sh
 pytest tests/test_product_page.py
+```
+```sh
+pytest tests/test_cart.py
+```
+```sh
+pytest tests/test_categories.py
+```
+```sh
+pytest tests/test_homepage.py
 ```
