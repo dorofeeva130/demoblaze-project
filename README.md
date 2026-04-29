@@ -36,6 +36,7 @@
 
 ### Автотесты
 
+- [Тест добавления товара в корзину](tests/test_cart.py)
 - [Тест перехода между категориями товаров](tests/test_categories.py)
 - [Тест загрузки главной страницы](tests/test_homepage.py)
 
@@ -64,9 +65,14 @@ pytest
 7. Запустить отдельный тест:
 ```sh
 <<<<<<< HEAD
+pytest tests/test_cart.py
+```
+=======
+<<<<<<< HEAD
 pytest tests/test_categories.py
 ```
 =======
 pytest tests/test_homepage.py
 ```
+>>>>>>> main
 >>>>>>> main
